@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <title> registeration </title>
+</head>
+<body>
+    <center>
+        <h1> FACEBOOK </h1>
+        <form method="POST">
+            {% csrf_token %}
+        <hr/>
+        <table border="1px solid black;">
+        {{form}}
+        <h1 style="color: red;">{{error}}</h1>
+        <h2 style="color: green;">{{info}}</h2>
+    </table>
+    <input type="submit" value="Sign in"/>
+    <a href="{% url 'loginuser' %}"> signout </a>
+    </form>
+
+    </center>
+</body>
+</html>
