@@ -1,0 +1,45 @@
+<html>
+    <head>
+        {% load static %}
+    <title> sign up </title>
+        <style>
+            table {border:0.5px solid black;
+                   border-radius:1px;}
+            h1 {text-align: center;}
+             </style>
+            </head>
+            <body style="background-color:lightgrey;">
+            <center>
+                <h1 style="font-size:200%;"> Create a new account </h1>
+                <table>
+                     <form  method="POST">
+                     {% csrf_token %}
+                    <tr>
+                        <td> Name </td>
+                        <td> <input type="text" name="name" > </td>
+                    </tr>
+                    <tr>
+                        <td> E-mail</td>
+                    <td><input type="email" name="email" ></td>
+                    </tr>
+                     <tr>
+                        <td> password</td>
+                    <td><input type="password" name="password1"></td>
+                    </tr>
+                    <tr>
+                        <td> Confirm password </td>
+                    <td><input type="password" name="password2"></td>
+                    </tr>
+                        <center><td><input type="submit" value = "submit"></td></center>
+                    </tr>
+                    <table>
+                        <tr>
+                        <a href="{% url 'signin' %}"> BACK</a>
+                        </tr>
+                    </table>
+                </form>
+            </table>
+        </center>
+    
+</body>
+</html>
